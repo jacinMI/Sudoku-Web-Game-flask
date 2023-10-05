@@ -46,7 +46,7 @@ def Index():
     if request.method == 'POST':
         level = request.form.get('level')
         # print(level)
-        New_Game = Gs.main(level)
+        start_Game = Gs.main(level)
         return jsonify(
             cell_A1=str(New_Game[0, 0]),
             cell_A2=str(New_Game[0, 1]),
@@ -251,3 +251,4 @@ def privacy():
 
 if __name__ == "__main__":
     app.run(debug=True)
+    print ("Hello")
